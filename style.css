@@ -1,0 +1,186 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+}
+
+button{
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEC5E5;
+    color: deeppink;
+    border: 4px solid deeppink;
+    border-radius: 4px;
+    box-shadow: 3px 3px #8a00c2;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.rubber-band:hover{
+    animation: effect linear 1s infinite;
+}
+
+@keyframes effect {
+    0%,100%{
+        transform: scale(1,1);
+    }
+    25%{
+        transform: scale(1.3, 0.6);
+    }
+    50%{
+        transform: scale(1.1, 0.9);
+    }
+}
+
+.heart:hover{
+    animation: heartbeat .25s infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes heartbeat {
+    to {
+        transform: scale(1.4);
+    }
+}
+
+.zoom:hover{
+    transform: scale(1.5);
+    transition: transform 0.2s;
+    animation: zoom-in-out 1s ease;
+}
+
+@keyframes zoom-in-out {
+    0%,100%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(1.5, 1.5);
+    }
+}
+
+.head-shake:hover{
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% { 
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    30% { 
+        transform: translate(3px, 2px) rotate(0deg); 
+    }
+    60% { 
+        transform: translate(-3px, 1px) rotate(0deg); 
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg); 
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg); 
+    }
+}
+
+.flip-btn:hover{
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+    transition: transform 0.6s;
+}
+
+.flip-btn:active{
+    animation-name: flip;
+}
+
+@keyframes flip {
+    0%{
+        transform: perspective(400px) rotateX(0deg);
+    }
+    50%{
+        transform: perspective(400px) rotateX(180deg);
+    }
+    100%{
+        transform: perspective(400px) rotateX(360deg);
+    }
+}
+
+.fade-in:hover{
+    animation: fade 2s ease;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.tada:hover{
+    animation: tada 1.5s ease;
+}
+
+@keyframes tada {
+    0%,100%{
+        transform: scale3d(1,1,1);
+    }
+    10%,20%{
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%,50%,70%,90%{
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+}
+
+.flash:hover{
+    animation: flash linear 1s infinite;
+}
+
+@keyframes flash {
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .1;
+    }
+}
+
+.rotate:hover{
+    animation: rotate-btn 2.3s infinite;
+}
+
+@keyframes rotate-btn {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.jello:hover{
+    animation: jello 2s infinite;
+}
+
+@keyframes jello {
+    11.1% {
+        transform: none
+      }
+      44.4% {
+        transform: skewX(-3.125deg) skewY(-3.125deg)
+      }
+      66.6% {
+        transform: skewX(-0.78125deg) skewY(-0.78125deg)
+      }
+      88.8% {
+        transform: skewX(-0.1953125deg) skewY(-0.1953125deg)
+      }
+      100% {
+        transform: none
+      }
+}
