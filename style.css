@@ -22,6 +22,7 @@ button{
     font-weight: 700;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .rubber-band:hover{
     animation: effect linear 1s infinite;
 }
